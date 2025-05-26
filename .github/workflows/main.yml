@@ -3,51 +3,39 @@ name: Generate Snake Animation
 on:
   schedule:
     - cron: "0 0 * * *" # Runs daily at midnight
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch: # Allows manual triggering from the Actions tab
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    permissions: # Added permissions block for clarity
+      contents: write # Needed to push the generated snake SVG to the repository
 
-      - name: Generate Snake Animation
-        uses: Platane/snk/svg-only@v3 # Use svg-only for simpler output
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # Updated to v4 for latest features/security
+
+      - name: Generate Snake Animation SVG
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          # list of files to generate.
-          # one file per line. Each new line uses a different color!
+          # Define the output files for the snake animation
+          # The first will be the standard animation, the second a dark mode version
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push to output branch (if you want to keep generated files in a separate branch)
-        # This step is optional, but good practice if you want to keep your main branch clean
-        # If you use this, change the image URL in README.md accordingly
-        # For simplicity, the current README expects the file in the main branch's dist folder
-        # If you don't use this, the file will be in the main branch.
-        # uses: crazy-max/ghaction-github-pages@v2.5.0
-        # with:
-        #   target_branch: output # Or any other branch name
-        #   build_dir: dist
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # If not using a separate output branch, commit directly to main/master
-      - name: Commit and Push
+      - name: Commit and Push SVG to Repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
-          # Check if there are changes to commit
-          if ! git diff-index --quiet HEAD; then
-            git commit -m "Generate Contribution Snake"
+          git add dist # Add only the 'dist' directory where SVGs are generated
+          # Check if there are changes to commit in the 'dist' directory
+          if ! git diff-index --quiet HEAD -- dist/; then
+            git commit -m "feat: generate contribution snake 🐍"
             git push
           else
             echo "No changes to commit for snake animation."
           fi
-        # Ensure the action has write permissions to the repository
-        # Go to Repository Settings -> Actions -> General -> Workflow permissions -> Set to "Read and write permissions"
