@@ -3,78 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Ops Engineer Profile</title>
+  <title>Alex Ops | GenAI, AI Agents, MLOps, AIOps, DevOps & Cloud DevOps Engineer</title>
+  <meta name="description" content="Alex Ops is a GenAI, AI Agents, MLOps, AIOps, DevOps, and Cloud DevOps engineer building production-grade AI platforms, automation pipelines, and reliable cloud infrastructure.">
+  <meta name="keywords" content="GenAI engineer, AI agents engineer, MLOps engineer, AIOps engineer, DevOps engineer, cloud DevOps, AI operations, machine learning operations, Kubernetes, Terraform, AWS, platform engineering">
+  <meta name="author" content="Alex Ops">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://YOUR_GITHUB_USERNAME.github.io/Profile/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Ops | GenAI, AI Agents, MLOps, AIOps, DevOps & Cloud DevOps">
+  <meta property="og:description" content="Portfolio and profile of Alex Ops: building secure, scalable, and observable AI + cloud platforms.">
+  <meta property="og:url" content="https://YOUR_GITHUB_USERNAME.github.io/Profile/">
+  <meta property="og:image" content="https://media.giphy.com/media/QaMcY2W4ReTe0oK2Y1/giphy.gif">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alex Ops | GenAI, AI Agents, MLOps, AIOps, DevOps & Cloud DevOps">
+  <meta name="twitter:description" content="Production-focused AI and cloud engineer profile.">
+  <meta name="twitter:image" content="https://media.giphy.com/media/QaMcY2W4ReTe0oK2Y1/giphy.gif">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Ops",
+    "url": "https://YOUR_GITHUB_USERNAME.github.io/Profile/",
+    "jobTitle": "GenAI / AI Agents / MLOps / AIOps / DevOps Engineer",
+    "description": "Engineer focused on Generative AI, AI Agents, MLOps, AIOps, and Cloud DevOps.",
+    "email": "mailto:YOUR_EMAIL@example.com",
+    "sameAs": [
+      "https://github.com/YOUR_GITHUB_USERNAME",
+      "https://www.linkedin.com/in/YOUR_LINKEDIN/"
+    ],
+    "knowsAbout": [
+      "Generative AI",
+      "AI Agents",
+      "MLOps",
+      "AIOps",
+      "DevOps",
+      "Cloud DevOps",
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Observability"
+    ]
+  }
+  </script>
+
   <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141a2f;
+      --text: #ebefff;
+      --muted: #b9c2ea;
+      --accent: #7f9dff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1rem;
+      color: var(--text);
+      background: linear-gradient(180deg, #090d1a 0%, #0e1530 100%);
     }
-    header, section {
+
+    .container {
+      width: min(980px, 92vw);
+      margin: 0 auto;
+      padding: 1.5rem 0 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(127, 157, 255, 0.2);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    header, section, footer {
       text-align: center;
     }
-    hr {
-      margin: 2rem 0;
+
+    h1, h2 {
+      line-height: 1.2;
+      margin: 0.5rem 0;
     }
-    img.stats {
-      max-width: 100%;
+
+    p {
+      margin: 0.6rem 0;
+      color: var(--muted);
+    }
+
+    .hero-img {
+      width: min(100%, 640px);
+      border-radius: 10px;
+      border: 1px solid rgba(127, 157, 255, 0.35);
+    }
+
+    nav a,
+    a {
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+      margin: 0.9rem 0 0;
+    }
+
+    .chip {
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(127, 157, 255, 0.45);
+      font-size: 0.9rem;
+      color: #dce5ff;
+    }
+
+    .stats {
+      width: min(100%, 760px);
+      border-radius: 10px;
+      margin: 0.4rem 0;
+      border: 1px solid rgba(127, 157, 255, 0.25);
+    }
+
+    .project-list {
+      text-align: left;
+      margin: 0 auto;
+      width: min(700px, 95%);
+    }
+
+    .project-list li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://media.giphy.com/media/QaMcY2W4ReTe0oK2Y1/giphy.gif" alt="Coding" width="600">
-    <h1>Hi there, I'm Alex Ops</h1>
-    <h3>AI Ops Engineer | Cloud Automation | MLOps Practitioner</h3>
-    <p>
-      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> |
-      <a href="mailto:YOUR_EMAIL@example.com">Email</a>
-    </p>
-  </header>
+  <a class="sr-only" href="#main-content">Skip to main content</a>
 
-  <hr>
+  <div class="container">
+    <header class="card">
+      <img
+        class="hero-img"
+        src="https://media.giphy.com/media/QaMcY2W4ReTe0oK2Y1/giphy.gif"
+        alt="Animated coding dashboard showing AI and cloud engineering workflow"
+        width="640"
+        height="360"
+        loading="eager"
+      >
+      <h1>Hi there, I'm Alex Ops</h1>
+      <p><strong>GenAI Engineer | AI Agents Engineer | MLOps Engineer | AIOps Engineer | DevOps Engineer | Cloud DevOps</strong></p>
+      <p>
+        I build production-grade AI systems, agentic workflows, and cloud-native automation with strong reliability, observability, and security practices.
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" rel="me noopener noreferrer" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" rel="me noopener noreferrer" target="_blank">GitHub</a> |
+        <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+      </p>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm a professional dedicated to building reliable and scalable AI systems. My interests include automation, observability, and applying machine learning to improve operations.
-    </p>
-  </section>
+      <nav aria-label="Primary sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#stats">GitHub Stats</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section>
-    <h2>Skills</h2>
-    <p>
-      Python • Docker • Kubernetes • AWS • Terraform • Prometheus • Grafana
-    </p>
-  </section>
+    <main id="main-content">
+      <section id="about" class="card" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>
+          I am a professional focused on <strong>Generative AI</strong>, <strong>AI Agents</strong>, <strong>MLOps</strong>, <strong>AIOps</strong>, and <strong>Cloud DevOps</strong>. I design automation pipelines, model-serving infrastructure, CI/CD workflows, and monitoring systems that keep AI products stable in production.
+        </p>
+      </section>
 
-  <hr>
+      <section id="skills" class="card" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Core Skills</h2>
+        <ul class="chips" aria-label="Skills list">
+          <li class="chip">Python</li>
+          <li class="chip">Docker</li>
+          <li class="chip">Kubernetes</li>
+          <li class="chip">AWS</li>
+          <li class="chip">Terraform</li>
+          <li class="chip">GitHub Actions</li>
+          <li class="chip">Prometheus</li>
+          <li class="chip">Grafana</li>
+          <li class="chip">MLOps</li>
+          <li class="chip">AIOps</li>
+          <li class="chip">LLMOps</li>
+          <li class="chip">Agentic AI</li>
+        </ul>
+      </section>
 
-  <section>
-    <h2>GitHub Stats</h2>
-    <p>
-      <img class="stats" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical" alt="GitHub Stats">
-      <br>
-      <img class="stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical" alt="Top Languages">
-    </p>
-  </section>
+      <section id="stats" class="card" aria-labelledby="stats-heading">
+        <h2 id="stats-heading">GitHub Stats</h2>
+        <img
+          class="stats"
+          src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical"
+          alt="GitHub stats for Alex Ops"
+          loading="lazy"
+          width="760"
+          height="330"
+        >
+        <img
+          class="stats"
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical"
+          alt="Top programming languages used by Alex Ops"
+          loading="lazy"
+          width="760"
+          height="330"
+        >
+      </section>
 
-  <hr>
+      <section id="projects" class="card" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Highlighted Projects</h2>
+        <ul class="project-list">
+          <li><a href="#">AI Agent Orchestration Platform</a> — Multi-agent workflows with observability and policy guardrails.</li>
+          <li><a href="#">MLOps Deployment Blueprint</a> — Reproducible model training and deployment pipeline with CI/CD.</li>
+          <li><a href="#">AIOps Incident Automation</a> — Event correlation and automated remediation for cloud infrastructure.</li>
+        </ul>
+      </section>
+    </main>
 
-  <section>
-    <h2>Highlighted Projects</h2>
-    <ul>
-      <li><a href="#">Project 1</a> - Describe your AI Ops project here.</li>
-      <li><a href="#">Project 2</a> - Another cool project description.</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <footer>
-    <p>Thanks for visiting my profile!</p>
-  </footer>
+    <footer class="card">
+      <p>Thanks for visiting my profile.</p>
+      <p><small>Tip: Replace placeholder links and usernames to improve trust and indexing quality.</small></p>
+    </footer>
+  </div>
 </body>
 </html>
